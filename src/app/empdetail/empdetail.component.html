@@ -1,0 +1,56 @@
+<div class="card contentEmpList">
+    <div class="col-sm-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <ul class="navbar-nav mr-auto">
+                <li [style.color]="'white'">
+                    <button class="btn btn-light my-2 my-sm-0" [routerLink]="['/employee']">
+                        <i class="fa fa-arrow-circle-left" aria-hidden="true" [ngStyle]="{fontSize: '21px', marginRight: '7px'}"></i>
+                        <span>Back</span>
+                    </button>
+                </li>
+                <li [style.marginLeft.rem]="25">
+                    <h4 class="text-center" [style.color]="'white'">Detail Information</h4>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row" [style.marginTop.px]="10">
+        <div class="col-sm-3 offset-sm-1 content" [ngStyle]="{height: '300px', background: '#E0E0E0'}">
+            <div [ngStyle]="{fontSize: '9rem', marginLeft: '4.5rem'}">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-center">{{empDetail.empName}}</h3>
+            <h3 class="text-center">{{empDetail.empId}}</h3>
+        </div>
+        <div class="col-sm-6 offset-sm-1 content" [ngStyle]="{height: '300px', background: '#E0E0E0'}">
+            <div [style.marginTop.px]="10">
+                <p><strong>EMAIL ID:</strong>
+                <span class="infoDetail">{{empDetail.emailId}}</span></p>
+            </div>
+            <div>
+                <p><strong>LOCATION:</strong>
+                <span class="infoDetail">{{empDetail.empLocation}}</span></p>
+            </div>
+            <div>
+                <p><strong>JOB LEVEL:</strong>
+                <span class="infoDetail">{{empDetail.jobLevel}}</span></p>
+            </div>
+            <div>
+                <p><strong>YEARS OF EXPERIENCE:</strong>
+                <span class="infoDetail">{{empDetail.yearOfExperience}}</span></p>
+            </div>
+            <div>
+                <p><strong>PHONE NO:</strong>
+                <span class="infoDetail">{{empDetail.phoneNo}}</span></p>
+            </div>
+            <div>
+                <p><strong>NO OF PROJECTS WORKED:</strong>
+                <span class="infoDetail">{{empDetail.noOfProjectsWorked}}</span></p>
+            </div>
+            <div>
+                <p><strong>SKILLS:</strong>
+                <span class="infoDetail">{{empDetail.skills}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

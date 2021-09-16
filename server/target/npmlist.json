@@ -1,0 +1,1 @@
+{"version":"0.0.0","name":"fbwebservice","dependencies":{"body-parser":{"version":"1.18.3"},"cors":{"version":"2.8.5"},"express":{"version":"4.17.1"},"http-status-codes":{"version":"1.4.0"},"mongodb-promise":{"version":"0.0.4"},"mongodb":{"version":"3.6.11"},"promise-mysql":{"version":"3.3.2"},"promised-mongo":{"version":"1.2.0"},"serve-favicon":{"version":"2.4.5"}}}

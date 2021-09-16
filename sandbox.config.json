@@ -1,0 +1,9 @@
+{
+  "template": "node",
+  "view": "terminal",
+  "container": {
+    "node": "14",
+    "startScript": "yarn start"
+  },
+  "infiniteLoopProtection": true
+}

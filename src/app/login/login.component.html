@@ -1,0 +1,94 @@
+<div class="col-sm-6 offset-sm-3">
+  <div class="card" [style.background]="'#E0E0E0'">
+      <h3 class="text-center" [style.marginTop.rem]="2">Login Form</h3>
+      <div class="card-body">
+          <form [formGroup]="loginForm">
+            <div class="form-group">
+                <label for="username" class="col-form-label">Username</label>
+                <div class="input-group">
+                    <input 
+                        formControlName="username"
+                        type="text" 
+                        class="form-control" 
+                        required 
+                        [ngClass]="{
+                            'valid': loginForm.get('username').valid ,
+                            'invalid': loginForm.get('username').hasError('required')
+                        }"
+                    >
+                </div>
+                <ctrl-error-display
+                    [control]="loginForm.get('username')"
+                    [errInfo]="[
+                        ['required','This field is required.']
+                    ]"
+                >
+                </ctrl-error-display>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-form-label">Password</label>
+                <div class="input-group">                    
+                    <input
+                        formControlName="password"    
+                        [type]="showpassword ? 'text' : 'password'"
+                        class="form-control"
+                        required
+                        [ngClass]="{
+                            'valid': loginForm.get('password').valid,
+                            'invalid': loginForm.get('password').hasError('required')
+                            ||
+                            !loginForm.get('password').valid
+                        }"
+                    />
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <em 
+                                class="fa"
+                                [ngClass]="{
+                                    'fa-eye-slash': !showpassword,
+                                    'fa-eye': showpassword
+                                }"
+                                (click)="showpassword=!showpassword"
+                            >
+                            </em>
+                        </span>
+                    </div>
+                </div>
+                <ctrl-error-display                         
+                    [control]="loginForm.get('password')"
+                    [errInfo]="[
+                        ['required','This field is required.'],
+                        ['pattern',
+                            'Password too weak, it must contain:
+                            <br>At least 1 lowercase alphabetical character
+                            <!-- <br>At least 1 uppercase alphabetical character -->
+                            <br>At least 1 numeric character
+                            <br>At least one special character [!@#$%^&*]
+                            <br>Must be eight characters or longer 
+                        ']
+                    ]"
+                >
+                </ctrl-error-display>
+            </div>
+            <div *ngIf="_ERROR" class="form-group row">
+                <small  
+                    class="form-control" 
+                    [style.color]="'red'"
+                >
+                    {{_ERROR}}
+                </small>
+            </div>  
+            <!-- <div class="form-group row" *ngIf="_ERROR" [style.color]="'red'">
+                <div class="col-sm-9 offset-sm-3">
+                    <span>{{_ERROR}}</span>
+                </div>
+            </div> -->
+              <div class="form-group row">
+                  <div class="col-sm-9 offset-sm-3">
+                      <button type="submit" class="btn btn-info" [disabled]="!loginForm.valid" (click)="onLogin()">Login</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

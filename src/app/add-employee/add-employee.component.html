@@ -1,0 +1,238 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <form
+          [formGroup]="addEmployeeForm"
+          (ngSubmit)="addEmployee()"
+        >
+            <div class="modal-header">
+                <h5 class="modal-title">Add Employee</h5>
+                <button
+                  #closebutton
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  data-dismiss="modal"
+                  (click)="closeModal()"
+                >
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label for="emailId" class="col col-form-label">
+                        Email
+                    </label>
+                    <div class="col-sm-10">
+                        <input
+                          formControlName="emailId"
+                          type="email" class="form-control"
+                          required
+                          [ngClass]="{
+                            'valid': addEmployeeForm.get('emailId').valid ,
+                            'invalid': addEmployeeForm.get('emailId').hasError('required')
+                            ||
+                            !addEmployeeForm.get('emailId').valid
+                          }"
+                        >
+                        <ctrl-error-display
+                          [control]="addEmployeeForm.get('emailId')"
+                          [errInfo]="[
+                            ['required','This field is required.'],
+                            ['email','Enter a correct email address.']
+                          ]"
+                        ></ctrl-error-display>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="empName" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-5">
+                        <input
+                          formControlName="empName"
+                          type="text" class="form-control"
+                        >
+                        <ctrl-error-display
+                          [control]="addEmployeeForm.get('empName')"
+                          [errInfo]="[
+                            ['required','This field is required.']
+                          ]"
+                        ></ctrl-error-display>
+                    </div>
+                    <label for="empId" class="col-sm-1 col-form-label">ID</label>
+                    <div class="col-sm-4">
+                        <input
+                          formControlName="empId"
+                          type="text" class="form-control"
+                        >
+                        <ctrl-error-display
+                          [control]="addEmployeeForm.get('empId')"
+                          [errInfo]="[
+                            ['required','This field is required.'],
+                            ['pattern','Wrong ID format.']
+                          ]"
+                        ></ctrl-error-display>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="empLocation" class="col-sm-2 col-form-label">Location</label>
+                    <div class="col-sm-5">
+                        <input
+                          formControlName="empLocation"
+                          type="text" class="form-control"
+                        >
+                        <ctrl-error-display
+                          [control]="addEmployeeForm.get('empLocation')"
+                          [errInfo]="[
+                            ['required','This field is required.']
+                          ]"
+                        ></ctrl-error-display>
+                    </div>
+                    <label for="jobLevel" class="col-sm-1 col-form-label">Level</label>
+                    <div class="col-sm-4">
+                        <input
+                          formControlName="jobLevel"
+                          type="number" class="form-control"
+                        >
+                        <ctrl-error-display
+                          [control]="addEmployeeForm.get('jobLevel')"
+                          [errInfo]="[
+                            ['required','This field is required.'],
+                            ['min','Level -> at least 3'],
+                            ['max','Level -> at most 8']
+                          ]"
+                        ></ctrl-error-display>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="phoneNo" class="col-sm-4 col-form-label">
+                        Phone No
+                    </label>
+                    <div class="col-sm-6">
+                        <input
+                          formControlName="phoneNo"
+                          type="number" class="form-control"
+                        >
+                        <ctrl-error-display
+                          [control]="addEmployeeForm.get('phoneNo')"
+                          [errInfo]="[
+                            ['required','This field is required.'],
+                            ['pattern','Enter a correct phone number.']
+                          ]"
+                        ></ctrl-error-display>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3 col-form-label">
+                        <label
+                          for="gender"
+                        >
+                            Gender
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input
+                          formControlName="gender"
+                          type="radio"
+                          value="Male" name="gender" id="gender"
+                          class="form-check-input"
+                        >
+                        <!-- checked -->
+                        <label class="form-check-label" for="male" >
+                            Male
+                        </label>
+                        <span class="col-sm-3"></span>
+                        <input
+                          formControlName="gender"
+                          type="radio"
+                          value="Female" name="gender" id="gender"
+                          class="form-check-input"
+                        >
+                        <label class="form-check-label" for="female">
+                            Female
+                        </label>
+                    </div>
+                    <ctrl-error-display
+                          [control]="addEmployeeForm.get('gender')"
+                          [errInfo]="[
+                            ['required','This field is required.']
+                          ]"
+                    ></ctrl-error-display>
+                </div>
+                <div class="form-group row">
+                    <label
+                      for="yearOfExperience"
+                      class="col-sm-4 col-form-label"
+                    >
+                        Years of Experience
+                    </label>
+                    <div class="col-sm-6">
+                        <input
+                          formControlName="yearOfExperience"
+                          type="number" class="form-control"
+                        >
+                        <ctrl-error-display
+                          [control]="addEmployeeForm.get('yearOfExperience')"
+                          [errInfo]="[
+                            ['required','This field is required.'],
+                            ['min','Greater than 0']
+                          ]"
+                        ></ctrl-error-display>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label
+                      for="noOfProjectsWorked"
+                      class="col-sm-4 col-form-label"
+                    >
+                        No of Projects
+                    </label>
+                    <div class="col-sm-6">
+                        <input
+                          formControlName="noOfProjectsWorked"
+                          type="number"
+                          class="form-control"
+                        >
+                        <ctrl-error-display
+                          [control]="addEmployeeForm.get('noOfProjectsWorked')"
+                          [errInfo]="[
+                            ['required','This field is required.'],
+                            ['min','Greater than 0']
+                          ]"
+                        ></ctrl-error-display>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <small *ngIf="_ERROR" class="form-control" [style.color]="'red'">
+                  {{_ERROR}}
+              </small>
+              <button
+                type="submit"
+                [ngClass]="{
+                  'btn btn-primary':
+                  addEmployeeForm.valid,
+                  'btn btn-outline-primary':
+                  !addEmployeeForm.valid
+                }"
+                [disabled]='!addEmployeeForm.valid'
+              >
+                  <span>Add</span>
+                  <i
+                    class="fa fa-plus"
+                    aria-hidden="true"
+                    [ngStyle]="{
+                      fontSize: '21px',
+                      marginLeft: '7px'
+                    }"
+                  ></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                (click)="closeModal()"
+              >
+                  Cancel
+              </button>
+            </div>
+        </form>
+    </div>
+</div>

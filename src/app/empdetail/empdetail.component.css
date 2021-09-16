@@ -1,0 +1,16 @@
+.content {
+    border-radius: 15px;
+}
+
+.card {
+    background-color: inherit;
+    border: none;
+}
+
+.infoDetail {
+    margin-left: 10px;
+}
+
+.contentEmpList {
+    margin: 2rem;
+}

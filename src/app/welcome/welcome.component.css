@@ -1,0 +1,15 @@
+.welcome {
+    margin-top: 50px;
+    height: 215px;  
+    border-radius: 20px;  
+    background: #E0E0E0;
+}
+
+img {
+    height: 125px;
+    width: inherit;
+}
+
+h3 {
+    margin-bottom: 15px;
+}

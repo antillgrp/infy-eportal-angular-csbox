@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="content offset-sm-2 col-sm-8">
+        <div class="card welcome">
+            <div class="card-body">
+                <h3 class="text-center">
+                  Welcome
+                  <span *ngIf="username"><strong>
+                    {{username}}
+                  </strong></span>
+                  to EPORTAL
+                </h3>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img  class="rounded mx-auto d-block img-thumbnail" src="../../assets/images/hand_shake.png" alt="Not Found">
+                    </div>
+                    <span class="col-sm-9">
+                        <strong>EPortal</strong> is an application where managers can collect information about the job and skill set of their team members as well as where team members can also submit information relevant to their job. Functionality of dynamic addition of team members as well as option for team members to upload is work in progress.
+                        <div *ngIf="!username">
+                            <a [routerLink]="['login']">Click here to Login</a>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

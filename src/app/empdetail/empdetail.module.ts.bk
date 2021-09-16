@@ -1,0 +1,15 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { EmpDetailRoutingModule } from './empdetail-routing.module.ts.bk';
+
+
+@NgModule({
+  declarations: [
+
+  ],
+  imports: [
+    CommonModule,
+    EmpDetailRoutingModule
+  ]
+})
+export class EmpDetailModule { }

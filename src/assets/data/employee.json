@@ -1,0 +1,76 @@
+[
+    {
+        "empId": 939073,
+        "empName": "Albert",
+        "empLocation": "Mexico",
+        "jobLevel": 3,
+        "onSite": true,
+        "emailId": "albert@xyz.com",
+        "skills": ["HTML5", "CSS3", "Javascript", "Jasmine"],
+        "gender": "Male",
+        "yearOfExperience": 2.5,
+        "noOfProjectsWorked": 2,
+        "phoneNo": 8493010798
+    },
+    {
+        "empId": 813123,
+        "empName": "Brian",
+        "empLocation": "Texas",
+        "jobLevel": 4,
+        "onSite": true,
+        "emailId": "brian@xyz.com",
+        "skills": ["HTML5", "CSS3", "Javascript", "Angular"],
+        "yearOfExperience": 4.5,
+        "noOfProjectsWorked": 3,
+        "phoneNo": 8493010798
+    },
+    {
+        "empId": 524234,
+        "empName": "Charlie",
+        "empLocation": "Indianapolis",
+        "jobLevel": 5,
+        "onSite": true,
+        "emailId": "charlie@xyz.com",
+        "skills": ["HTML5", "CSS3", "Javascript", "AngularJS"],
+        "yearOfExperience": 6,
+        "noOfProjectsWorked": 2,
+        "phoneNo": 8493010798
+    },
+    {
+        "empId": 435345,
+        "empName": "David",
+        "empLocation": "Britain",
+        "jobLevel": 6,
+        "onSite": true,
+        "emailId": "david@xyz.com",
+        "skills": ["HTML5", "CSS3", "Javascript", "AngularJS", "ReactJS"],
+        "yearOfExperience": 9.5,
+        "noOfProjectsWorked": 5,
+        "phoneNo": 8493010798
+    },
+    {
+        "empId": 324235,
+        "empName": "Finch",
+        "empLocation": "Bengaluru",
+        "jobLevel": 7,
+        "onSite": false,
+        "emailId": "finch@xyz.com",
+        "skills": ["HTML5", "CSS3", "Javascript", "Cloud"],
+        "yearOfExperience": 12,
+        "noOfProjectsWorked": 5,
+        "phoneNo": 8493010798
+    },
+    {
+        "empId": 9073,
+        "empName": "Gilbert",
+        "empLocation": "Hyderabad",
+        "jobLevel": 7,
+        "onSite": false,
+        "emailId": "gilbert@xyz.com",
+        "skills": ["Cloud", "Docker"],
+        "gender": "Male",
+        "yearOfExperience": 10,
+        "noOfProjectsWorked": 5,
+        "phoneNo": 7483022798
+    }
+]

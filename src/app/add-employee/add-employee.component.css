@@ -1,0 +1,25 @@
+/* .invalid {
+  border: 2px solid hsla(0, 90%, 70%, 1);
+}
+
+.valid {
+  border: 2px solid hsla(100, 90%, 70%, 1);
+}
+
+.disabled {
+  border: 2px solid hsla(0, 90%, 70%, 1);
+}
+
+
+
+input.ng-pristine {
+  background-color:yellow;
+}
+
+input.ng-touched.ng-invalid {
+  background-color:red;
+}
+
+input.ng-touched.ng-valid {
+  background-color:rgb(130, 218, 130);
+} */
