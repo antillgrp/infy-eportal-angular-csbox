@@ -11,8 +11,6 @@
 * **EPwebservice** folder contains the implemented a NodeJS-MongoDB server-side code.
 * **EP_UI** folder contains the Angular client-side app which needs to be implemented.
 
-<span style="color:read">some *blue* text</span>.
-
 ## GitHub Repo:<br /> [https://github.com/antillgrp/infy-eportal-angular-csbox](https://github.com/antillgrp/infy-eportal-angular-csbox) <br /><br />Live codesandbox.io playgroung:<br /> [https://codesandbox.io/s/infy-eportal-angular-csbox-sxjoq](https://codesandbox.io/s/infy-eportal-angular-csbox-sxjoq)
 <br />
 
