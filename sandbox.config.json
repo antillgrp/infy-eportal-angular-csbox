@@ -1,9 +1,10 @@
 {
   "template": "node",
-  "view": "terminal",
+  "view": "browser",
   "container": {
-    "node": "14",
-    "startScript": "yarn start"
+    "port": 8080,
+    "startScript": "yarn start",
+    "node": "14"
   },
   "infiniteLoopProtection": true
 }
