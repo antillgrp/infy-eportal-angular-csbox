@@ -18,13 +18,13 @@ const routes: Routes = [
   },
   {
     path: "employee",
-    component: EmplistComponent
-    //canActivate: [ LoggedInGuard ]
+    component: EmplistComponent,
+    canActivate: [LoggedInGuard]
   },
   {
     path: "empDetails/:empId",
-    component: EmpdetailComponent
-    //canActivate: [ LoggedInGuard ]
+    component: EmpdetailComponent,
+    canActivate: [LoggedInGuard]
   },
   {
     path: "**",
