@@ -1,29 +1,22 @@
 # [Angular: Beyond the Basics (Training)](https://lex.infosysapps.com/en/app/toc/lex_auth_0127668079785820163566/overview)
-
 ![](assets/20210905_190252_Angular.png)
 
 ---
-
 # Capstone Projects: EPortal Application
 
 ### **Problem Statement**
 
-"EPortal" is a Full-Stack(client-server) CRUD application where managers can collect information about the job and skill set of their team members as well as where team members can also submit information relevant to their job. Download [**CapstoneAngularProject.zip**](https://raw.githubusercontent.com/antillgrp/infy-eportal-angular/main/CapstoneAngularProject.zip). It contains two subfolders named **EP_UI** and **EPwebservice**.
+"EPortal" is a Full-Stack(client-server) CRUD application where managers can collect information about the job and skill set of their team members as well as where team members can also submit information relevant to their job. Download [**CapstoneAngularProject.zip**](https://raw.githubusercontent.com/antillgrp/infy-eportal-angular-csbox/main/Original/CapstoneAngularProject.zip). It contains two sub-folders named **EP_UI** and **EPwebservice**.
 
-* **EPwebservice** folder contains the implemented server-side code
-* **EP_UI** folder contains the client-side code which needs to be implemented
+* **EPwebservice** folder contains the implemented a NodeJS-MongoDB server-side code.
+* **EP_UI** folder contains the Angular client-side app which needs to be implemented.
 
-**Software’s Required:**
+<span style="color:read">some *blue* text</span>.
 
-1. Visual Studio Code
-2. MongoDB
-3. Node
+## GitHub Repo:<br /> [https://github.com/antillgrp/infy-eportal-angular-csbox](https://github.com/antillgrp/infy-eportal-angular-csbox) <br /><br />Live codesandbox.io playgroung:<br /> [https://codesandbox.io/s/infy-eportal-angular-csbox-sxjoq](https://codesandbox.io/s/infy-eportal-angular-csbox-sxjoq)
+<br />
 
-# [infy-eportal-angular](https://https://github.com/antillgrp/infy-eportal-angular)
-
-This web app is a **Full Stack** (Front-End (client) <=> Back-End (servers)).
-
-Next points describe how was it done and what technologies were used:
+![](assets/ScreenshotCodeSandbox.png)
 
 - # Front-End
 
@@ -36,18 +29,41 @@ Next points describe how was it done and what technologies were used:
 ### Instructions(webapp)
 
 ```
-cd infy-eportal-angular/EP_UI/
-npm start
+yarn start:ui
 ```
+<br />
 
+---
 - # Back-End
 
 #### Back-End consist in a Node/Express/MongoDriver (**REST APIs**):
 
 - #### express (web server)
-- #### mongo (mongodb driver for nodejs)
+- #### mongo (mongodb driver for nodejs)<br />
 
-### Database Server Setup:
+---
+## Cloud database Server Setup:
+
+- #### Create cloud database instance at:
+
+```
+https://www.mongodb.com/cloud
+```
+- #### Restoring EPORTAL_DB database from Dump File
+
+```
+mongorestore --uri mongodb+srv://admin:<PASSWORD>@cluster0.nyip3.mongodb.net --db EPORTAL_DB --gzip --archive=../eportal_db-mgodb.dump.gz
+```
+
+- #### For back-end app use connection string:
+
+```
+"mongodb+srv://<user>:<password>@cluster0.nyip3.mongodb.net/EPORTAL_DB?retryWrites=true&w=majority"
+```
+<br />
+
+---
+## Local database Server Setup:
 
 - #### Inicializing MongoDB Server Docker Container
 
@@ -66,18 +82,19 @@ mongorestore --db EPORTAL_DB --gzip --archive=../eportal_db-mgodb.dump.gz
 ```
 mongodump -d EPORTAL_DB --gzip --archive=../eportal_db-mgodb.dump.gz
 ```
+<br />
 
-### Webservice Instructions:
+---
+## Server Instructions:
 
 ```
-cd infy-eportal-angular/EPwebservice/
-sudo npm start
+yarn start:server
 ```
 
 On successful execution, you can see the following output in the terminal:
 
 ```
-Your web service is running in on port 1020
+Your web service is running in on port 4000
 ```
 
 ---
@@ -189,17 +206,3 @@ Input fields should have the validations
 |phoneNo|required|Phone No is required|
 
 **Hint: Use custom validators where ever necessary**
-
-
-
-# Angular CLI Template
-
-This template was generated with [Angular CLI](https://github.com/angular/angular-cli).
-
-## Running `ng` commands
-
-On the terminal on your bottom right there is a + you can click to open a new tab in it you can write any commands you want with:
-
-```
-yarn ng <your command>
-```
